@@ -221,7 +221,7 @@ function phone_validate_civicrm_validateForm($formName, &$fields, &$files, &$for
 
 
 function phone_validate_civicrm_validateForm($formName, &$fields, &$files, &$form, &$errors) {
-  if ($formName == 'CRM_Contact_Form_Contact') {
+  if ($formName == 'CRM_Contact_Form_Contact' || 'CRM_Contact_Form_Inline_Phone') {
     foreach ($fields['phone'] as $key => $phone) {
       if (($phone['phone'])!=NULL) { 
         if (!is_numeric($phone['phone'])) {
